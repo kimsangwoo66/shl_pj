@@ -42,7 +42,7 @@ export default function Login() {
               <Form.Label>비밀번호</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
-            <Link to="/MainStack">
+            <Link to="/home">
               <Button
                 variant="secondary"
                 disabled={loading}

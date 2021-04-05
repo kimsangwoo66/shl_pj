@@ -43,3 +43,12 @@ hr.class-6 {
   background-color: #fff;
   border-top: 5px dotted #8c8b8b;
 }
+
+.react-calendar {
+  width: 500px;
+  max-width: 100%;
+  background: black;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+}

@@ -7,6 +7,7 @@ import homepic from "../imagess/profile1.png";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import DatePicker from "react-datepicker";
 import { AiOutlineBgColors } from "react-icons/ai";
+import Calendars from "../component/Calendars";
 
 function HomeContent() {
   const [startDate, setStartDate] = useState(new Date());
@@ -17,8 +18,8 @@ function HomeContent() {
         <div className="row">
           {" "}
           {/*첫번째 행의 구성 */}
-          <div className="col-4">
-            <Card style={{ width: "20rem" }}>
+          <div className="col-5">
+            <Card style={{ width: "25rem" }}>
               <Card.Img variant="left" src={homepic} width="90px" />
               <Card.Body className="text=right">
                 <Card.Title className="text-right">김철수 선생님</Card.Title>
@@ -123,6 +124,10 @@ function HomeContent() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="col-6">
+          <br />
+          <Calendars />
         </div>
       </div>
     </div>

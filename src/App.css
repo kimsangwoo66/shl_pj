@@ -14,10 +14,32 @@
   justify-content: center;
 }
 
-.home {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+.datepicker_custom {
+  text-decoration-color: lightblue;
+}
+
+hr.class-1 {
+  border-top: 10px solid #8c8b8b;
+}
+
+hr.class-2 {
+  border-top: 3px double #8c8b8b;
+}
+
+hr.class-3 {
+  border-top: 1px dashed #8c8b8b;
+}
+
+hr.class-4 {
+  border-top: 1px dotted #8c8b8b;
+}
+
+hr.class-5 {
+  background-color: #fff;
+  border-top: 2px dashed #8c8b8b;
+}
+
+hr.class-6 {
+  background-color: #fff;
+  border-top: 5px dotted #8c8b8b;
 }

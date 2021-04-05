@@ -10,6 +10,7 @@ import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import "./MainStack.css";
 import { IconContext } from "react-icons";
+import { Button } from "react-bootstrap";
 
 import { Link, Switch, Route } from "react-router-dom";
 
@@ -25,23 +26,23 @@ export default function MainStack() {
         <div class="navbar-nav col-md-7">
           <li className="nav-item">
             <Link to={"/home"} className="nav-link">
-              홈
+              <Button variant="outline-secondary">홈</Button>{" "}
             </Link>
           </li>
           <li className="nav-item">
             <Link to={"/student"} className="nav-link">
-              학생
+              <Button variant="outline-secondary">학생</Button>{" "}
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to={"/register"} className="nav-link">
-              기록
+              <Button variant="outline-secondary">기록</Button>{" "}
             </Link>
           </li>
           <li className="nav-item">
             <Link to={"/plan"} className="nav-link">
-              일정
+              <Button variant="outline-secondary">일정</Button>{" "}
             </Link>
           </li>
         </div>
@@ -76,7 +77,9 @@ export default function MainStack() {
       </div>
       <hr />
 
-      <div className="container mt-3">
+      <div className="container-expand-inverse ml-5">
+        {" "}
+        {/*버튼 페이지를 누를때마다 변화하는 화면 컨테이너의 총 크기*/}
         <Switch>
           <Route exact path="/home" component={HomeContent} />
           <Route exact path="/student" component={StudentContent} />

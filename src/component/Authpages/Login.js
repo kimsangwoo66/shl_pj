@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 //import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
-import title1 from "../imagess/title1.png";
-import "../App.css";
+import title1 from "../../imagess/title1.png";
+import "../../App.css";
 
 export default function Login() {
   const emailRef = useRef();
@@ -54,7 +54,7 @@ export default function Login() {
             </Link>
           </Form>
 
-          <Link to="/signup">아이디/비밀번호찾기</Link>
+          <Link to="/FindIdPw">아이디/비밀번호찾기</Link>
           <span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

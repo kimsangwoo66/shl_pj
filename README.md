@@ -14,4 +14,9 @@
 ![image](https://user-images.githubusercontent.com/56182236/113601125-e6aa5b00-967b-11eb-86f6-69f843d71012.png)
 
 
+#공지사항 화면 v1 프로토타입
+![image](https://user-images.githubusercontent.com/56182236/115275443-c222a880-a17c-11eb-96ef-ac442397877a.png)
+
+
+
 

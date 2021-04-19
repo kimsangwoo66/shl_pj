@@ -53,21 +53,27 @@ export default class Login extends Component {
       password: e.target.value,
     });
   }
-
+  //서버로 로그인 요청 핸들러
   handleLogin(e) {
     e.preventDefault();
+
     this.setState({
       message: "",
       loading: true,
     });
 
-    AuthService.login(this.state.userId, this.state.password).then(
+    AuthService.login(this.state.userid, this.state.password).then(
       () => {
+        alert("로그인되었습니다."); // 로그인 검증 성공시 알림 메시지
+
         //class형 컴포넌트에서는 state나 props앞에 this를 써줘야한다.
-        this.props.history.push("/");
+        this.props.history.push("/home");
+
         window.location.reload();
       },
       (error) => {
+        //비밀번호 및 아이디 가 DB에 없을경우 에러 메시지
+        alert("아이디 및 비밀번호가 잘못되었습니다.");
         const resMessage =
           (error.response &&
             error.response.data &&
@@ -95,18 +101,18 @@ export default class Login extends Component {
                 this.form = c;
               }}
             >
-              <Form.Group id="email">
-                <Form.Label>아이디</Form.Label>
+              <Form.Group id="text">
+                <Form.Label htmlFor="userid">아이디</Form.Label>
                 <Form.Control
-                  name="email"
-                  type="email"
+                  name="id"
+                  type="text"
                   value={this.state.userid}
                   onChange={this.onChangeUserID}
-                  required
+                  required //부트 스트랩에서 제공하는 형식
                 />
               </Form.Group>
               <Form.Group id="password">
-                <Form.Label>비밀번호</Form.Label>
+                <Form.Label htmlFor="password">비밀번호</Form.Label>
                 <Form.Control
                   name="password"
                   type="password"
@@ -115,19 +121,17 @@ export default class Login extends Component {
                   required
                 />
               </Form.Group>
-              <Link to="/home">
-                <Button
-                  variant="secondary"
-                  //disabled={loading}
-                  className="w-100"
-                  type="submit"
-                  ref={(c) => {
-                    this.checkBtn = c;
-                  }}
-                >
-                  로그인
-                </Button>{" "}
-              </Link>
+              <Button
+                variant="secondary"
+                //disabled={loading}
+                className="w-100"
+                type="submit"
+                ref={(c) => {
+                  this.checkBtn = c;
+                }}
+              >
+                로그인
+              </Button>{" "}
             </Form>
 
             <Link to="/FindIdPw">아이디/비밀번호찾기</Link>

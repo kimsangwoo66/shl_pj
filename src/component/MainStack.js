@@ -3,6 +3,7 @@ import HomeContent from "../btnpage/HomeContent";
 import PlanContent from "../btnpage/PlanContent";
 import RegisterContent from "../btnpage/RegisterContent";
 import StudentContent from "../btnpage/StudentContent";
+import NoticeContent from "../btnpage/NoticeContent";
 import homepic from "../imagess/homepic.png";
 //import "bootstrap/dist/css/bootstrap.css"; //bootstrap 라이브러리
 import * as FaIcons from "react-icons/fa";
@@ -81,6 +82,7 @@ export default function MainStack() {
         {" "}
         {/*버튼 페이지를 누를때마다 변화하는 화면 컨테이너의 총 크기*/}
         <Switch>
+          <Route exact path="/notice" component={NoticeContent} />
           <Route exact path="/home" component={HomeContent} />
           <Route exact path="/student" component={StudentContent} />
           <Route exact path="/register" component={RegisterContent} />

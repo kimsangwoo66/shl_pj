@@ -35,7 +35,10 @@ function HomeContent() {
           </div>
           <div className="col-6">
             <div className="row">
-              <h5>알림사항</h5>
+              <Link to="/notice">
+                <h5>공지사항</h5>
+              </Link>
+
               <h5 className="ml-auto">더보기+</h5>
             </div>
             <hr />
@@ -95,18 +98,6 @@ function HomeContent() {
             <div className="row">
               <div className="col-7">
                 <div>
-                  <h5>오늘의 일정</h5>{" "}
-                  {/*정확히 어떤 일정들을 담아야할지 모르겠다. */}
-                  <hr className="class-2" />{" "}
-                  {/*App.css 에 hr 타입 종류 메소드화*/}
-                  <li>독서 감상문 제출 마감</li>{" "}
-                  {/*오늘 날짜의 캘린더에 들어가있는 내용이 리스트에 나와야한다.*/}
-                  <li>????????????????</li>
-                  <hr className="class-2" />
-                </div>
-              </div>
-              <div className="col-5">
-                <div>
                   <h5>활동 기록 제출</h5>{" "}
                   {/*정확히 어떤 일정들을 담아야할지 모르겠다. */}
                   <hr className="class-2" />{" "}
@@ -119,6 +110,18 @@ function HomeContent() {
                   <li>홍길동</li>
                   <li>홍길동</li>
                   <li>홍길동</li>
+                  <hr className="class-2" />
+                </div>
+              </div>
+              <div className="col-5">
+                <div>
+                  <h5>오늘의 일정</h5>{" "}
+                  {/*정확히 어떤 일정들을 담아야할지 모르겠다. */}
+                  <hr className="class-2" />{" "}
+                  {/*App.css 에 hr 타입 종류 메소드화*/}
+                  <li>독서 감상문 제출 마감</li>{" "}
+                  {/*오늘 날짜의 캘린더에 들어가있는 내용이 리스트에 나와야한다.*/}
+                  <li>????????????????</li>
                   <hr className="class-2" />
                 </div>
               </div>

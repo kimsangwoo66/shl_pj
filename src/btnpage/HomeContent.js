@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "../btnpage/Cresgister.css";
 //import { Nav } from "react-bootstrap";
 import "../App.css";
 import homepic from "../imagess/profile1.png";
@@ -38,8 +39,6 @@ function HomeContent() {
               <Link to="/notice">
                 <h5>공지사항</h5>
               </Link>
-
-              <h5 className="ml-auto">더보기+</h5>
             </div>
             <hr />
             <div>
@@ -102,14 +101,13 @@ function HomeContent() {
                   {/*정확히 어떤 일정들을 담아야할지 모르겠다. */}
                   <hr className="class-2" />{" "}
                   {/*App.css 에 hr 타입 종류 메소드화*/}
-                  <li>홍길동</li>{" "}
-                  {/*오늘 활동 기록을 제출한 학생들의 이름이 나도록 한다.*/}
-                  <li>홍길동</li>
-                  <li>홍길동</li>
-                  <li>홍길동</li>
-                  <li>홍길동</li>
-                  <li>홍길동</li>
-                  <li>홍길동</li>
+                  <ul className="record_submit-student">
+                    <li>김덕배</li>{" "}
+                    {/*오늘 활동 기록을 제출한 학생들의 이름이 나도록 한다.*/}
+                    <li>김갑수</li>
+                    <li>김나나</li>
+                    <li>정현배</li>
+                  </ul>
                   <hr className="class-2" />
                 </div>
               </div>

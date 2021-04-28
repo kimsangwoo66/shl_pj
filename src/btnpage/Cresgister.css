@@ -1,0 +1,67 @@
+.record_container {
+  display: flex;
+  /*컴포넌트들을 컬럼으로 나열*/
+}
+
+.left_content {
+  flex-direction: column;
+}
+
+.card_info {
+  width: 30vh;
+  height: 30vh;
+}
+
+.active_record_submit {
+  justify-content: center;
+  width: 25vh;
+  height: 30vh;
+}
+
+.hr1 {
+  border-width: 5px;
+  width: 25vh;
+}
+
+.record_submit-student {
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+}
+
+ul.record_submit-student li::before {
+  /*활동기록 제출 li new 고정*/
+  content: "new";
+  color: blue;
+  display: inline-block;
+}
+
+.right_content {
+  flex-direction: column;
+}
+
+.submit_record_check {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit_record_select {
+  width: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-container button {
+  cursor: pointer;
+}
+.modal_header {
+  display: flex;
+  justify-content: center;
+}
+
+.modal_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}

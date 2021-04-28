@@ -17,6 +17,13 @@
 #공지사항 화면 v1 프로토타입
 ![image](https://user-images.githubusercontent.com/56182236/115275443-c222a880-a17c-11eb-96ef-ac442397877a.png)
 
+#기록 화면 v1 프로토타입 
+![image](https://user-images.githubusercontent.com/56182236/116419665-3f82a300-a878-11eb-8501-b10ccd3bd5b6.png)
+
+#일정 화면 v1 프로토타입
+![image](https://user-images.githubusercontent.com/56182236/116419912-748ef580-a878-11eb-9f29-e0ab1c477d47.png)
+
+
 
 
 

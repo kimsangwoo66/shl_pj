@@ -4,11 +4,12 @@ const API_URL = "http://localhost:8080/api/auth/"; //API 전송 서버를 임시
 
 class AuthService {
   //로그인 및 회원가입 인증 클래스
-  login(userid, password) {
+  login(userid, password, userposition) {
     return axios
       .post(API_URL + "signin", {
         userid,
         password,
+        userposition,
       })
       .then((response) => {
         if (response.data.accessToken) {
@@ -36,8 +37,13 @@ class AuthService {
     });
   }
 
+  noticetable(noticetitle, username, userposition, noticecontent, openrange) {
+    //공지사항 등록하기
+    return axios.post(API_URL + "noticeup");
+  }
+
   getCurrentUser() {
-    return JSON.parse(localStorage.getItem("user"));
+    return JSON.parse(localStorage.getItem("user")); //json 파싱 방법으로 로컬저장소에 한 사용자의 튜플 정보를 저장한다.
   }
 }
 

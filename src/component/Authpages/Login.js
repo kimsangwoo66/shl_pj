@@ -1,4 +1,4 @@
-import React, { useRef, useState, Component } from "react";
+import React, { Component } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 //import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
@@ -39,6 +39,7 @@ export default class Login extends Component {
       password: "",
       loading: false,
       message: "",
+      userposition: "",
     };
   }
 
@@ -62,12 +63,23 @@ export default class Login extends Component {
       loading: true,
     });
 
-    AuthService.login(this.state.userid, this.state.password).then(
+    AuthService.login(
+      this.state.userid,
+      this.state.password,
+      this.state.userposition
+    ).then(
       () => {
         alert("로그인되었습니다."); // 로그인 검증 성공시 알림 메시지
 
         //class형 컴포넌트에서는 state나 props앞에 this를 써줘야한다.
-        this.props.history.push("/home");
+        //this.props.history.push("/home");
+        this.props.history.push({
+          pathname: "/home",
+          state: {
+            userid: this.state.userid,
+            userposition: this.state.userposition,
+          },
+        });
 
         window.location.reload();
       },

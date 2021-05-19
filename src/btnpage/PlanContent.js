@@ -4,10 +4,12 @@ import homepic from "../imagess/profile1.png";
 import DatePicker from "react-datepicker";
 import { BsSearch } from "react-icons/bs";
 import Calendars from "../component/Calendars";
+import AuthService from "../../src/services/auth.service";
 
 import "./Cplancontent.css";
 
 function PlanContent() {
+  const [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser);
   const [startDate, setStartDate] = useState(new Date());
   return (
     <section className="record_container">
@@ -17,13 +19,15 @@ function PlanContent() {
           <Card style={{ width: "14rem" }}>
             <Card.Img variant="top" src={homepic} width="30px" height="100px" />
             <Card.Body className="text=right">
-              <Card.Title className="text-right">김철수 선생님</Card.Title>
+              <Card.Title className="text-right">
+                {currentUser.username} 선생님
+              </Card.Title>
               <hr />
               <Card.Subtitle className="text-center">
-                mrk211@sungkul.ac.kr
+                {currentUser.userid}
               </Card.Subtitle>
               <Card.Text className="text-right">
-                <div>1학년 2반</div>
+                <div>{currentUser.userposition}</div>
               </Card.Text>
             </Card.Body>
           </Card>

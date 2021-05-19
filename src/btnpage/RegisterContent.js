@@ -7,6 +7,7 @@ import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 //import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 import DatePicker from "react-datepicker";
+import AuthService from "../../src/services/auth.service";
 
 const selectRow = (props) => {
   props.history.push("/home");
@@ -23,6 +24,7 @@ const onChangeHandler = (e) => {
 };
 
 function RegisterContent() {
+  const [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser);
   const [startDate, setStartDate] = useState(new Date());
   const [modalInfo, setModalInfo] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -50,98 +52,98 @@ function RegisterContent() {
   const data = [
     //테이블에 들어갈 데이터 임시 하드코딩
     {
-      recordname: "독서 토론 대회",
+      recordname: "컴퓨터 웹개발 동아리",
       kind: "동아리",
       name: "김갑수",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
-      kind: "동아리",
+      recordname: "정의란 무엇인가 독후감",
+      kind: "기타",
       name: "김둘둘",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
       recordname: "독서 토론 대회",
-      kind: "동아리",
+      kind: "대회 및 수상",
       name: "김셋",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
-      kind: "동아리",
+      recordname: "4차학생회 회의",
+      kind: "임원활동",
       name: "김다섯",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김여섯",
-      submitday: "2021/03/14",
+      submitday: "xx",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김일곱",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김여덜",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김아홉",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김열",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김열하나",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김열둘",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김열셋",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김열넷",
       submitday: "2021/03/14",
       read: "미확인",
     },
     {
-      recordname: "독서 토론 대회",
+      recordname: "xx",
       kind: "동아리",
       name: "김열여섯",
       submitday: "2021/03/14",
@@ -198,13 +200,15 @@ function RegisterContent() {
           <Card style={{ width: "14rem" }}>
             <Card.Img variant="top" src={homepic} width="30px" height="100px" />
             <Card.Body className="text=right">
-              <Card.Title className="text-right">김철수 선생님</Card.Title>
+              <Card.Title className="text-right">
+                {currentUser.username} 선생님
+              </Card.Title>
               <hr />
               <Card.Subtitle className="text-center">
-                mrk211@sungkul.ac.kr
+                {currentUser.userid}
               </Card.Subtitle>
               <Card.Text className="text-right">
-                <div>1학년 2반</div>
+                <div>{currentUser.userposition}</div>
               </Card.Text>
             </Card.Body>
           </Card>

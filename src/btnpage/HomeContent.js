@@ -5,12 +5,20 @@ import "../btnpage/Cresgister.css";
 //import { Nav } from "react-bootstrap";
 import "../App.css";
 import homepic from "../imagess/profile1.png";
-import { ListGroup, ListGroupItem } from "reactstrap";
+import { ListGroup } from "reactstrap";
 import DatePicker from "react-datepicker";
-import { AiOutlineBgColors } from "react-icons/ai";
+//import { AiOutlineBgColors } from "react-icons/ai";
 import Calendars from "../component/Calendars";
+import { useLocation } from "react-router";
+import AuthService from "../../src/services/auth.service";
+
+//const userid = this.props.location.state.userid;
 
 function HomeContent() {
+  const location = useLocation();
+  //const userid = location.state.userid;
+  //const userposition = location.state.userposition;
+  const [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser); //현재 로그인한 선생님 정보를 불러옴
   const [startDate, setStartDate] = useState(new Date());
   return (
     <div>
@@ -23,13 +31,15 @@ function HomeContent() {
             <Card style={{ width: "25rem" }}>
               <Card.Img variant="left" src={homepic} width="90px" />
               <Card.Body className="text=right">
-                <Card.Title className="text-right">김철수 선생님</Card.Title>
+                <Card.Title className="text-right">
+                  {currentUser.username} 선생님
+                </Card.Title>
                 <hr />
                 <Card.Subtitle className="text-right">
-                  mrk211@sungkul.ac.kr
+                  {currentUser.userid}
                 </Card.Subtitle>
                 <Card.Text className="text-right">
-                  <div>1학년 2반</div>
+                  <div>{currentUser.userposition}</div>
                 </Card.Text>
               </Card.Body>
             </Card>

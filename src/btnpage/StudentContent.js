@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Card, Button, Modal } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import homepic from "../imagess/profile1.png";
+import AuthService from "../../src/services/auth.service";
 
 function StudentContent() {
   const [startDate, setStartDate] = useState(new Date());
+  const [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
   return (
     <div>
       <section className="record_container">
@@ -19,13 +21,15 @@ function StudentContent() {
                 height="100px"
               />
               <Card.Body className="text=right">
-                <Card.Title className="text-right">김철수 선생님</Card.Title>
+                <Card.Title className="text-right">
+                  {currentUser.username} 선생님
+                </Card.Title>
                 <hr />
                 <Card.Subtitle className="text-center">
-                  mrk211@sungkul.ac.kr
+                  {currentUser.userid}
                 </Card.Subtitle>
                 <Card.Text className="text-right">
-                  <div>1학년 2반</div>
+                  <div>{currentUser.userposition}</div>
                 </Card.Text>
               </Card.Body>
             </Card>

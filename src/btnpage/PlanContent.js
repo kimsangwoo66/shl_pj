@@ -17,7 +17,7 @@ function PlanContent() {
         <h3 className="school_name">성결고등학교</h3>
         <section className="card_info">
           <Card style={{ width: "14rem" }}>
-            <Card.Img variant="top" src={homepic} width="30px" height="100px" />
+            <Card.Img variant="left" src={homepic} width="90px" />
             <Card.Body className="text=right">
               <Card.Title className="text-right">
                 {currentUser.username} 선생님
@@ -35,13 +35,14 @@ function PlanContent() {
         <br></br>
         <div>
           {" "}
-          <Button className="btn-info">
+          <div>
+            Today
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
               dateFormat="yyyy년 MM월 dd일"
             />
-          </Button>
+          </div>
         </div>
         <br></br>
         <section className="active_record_submit">

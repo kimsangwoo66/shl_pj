@@ -52,3 +52,40 @@ hr.class-6 {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5em;
 }
+
+.updown {
+  border: 1px solid #a0a096;
+  width: 0.1px;
+  height: 40px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.modals-text {
+  border: 1px solid #a0a096;
+}
+
+.hr-wid2 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border: 1px solid #a0a096;
+  width: 0.1px;
+}
+
+.table-modal {
+  width: 100%;
+  border: 1px solid #444444;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.table-modal-td {
+  border: 1px solid #444444;
+  padding-left: 20px;
+}
+
+.table-modal-fontsize {
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: right;
+}

@@ -52,102 +52,67 @@ function RegisterContent() {
   const data = [
     //테이블에 들어갈 데이터 임시 하드코딩
     {
-      recordname: "컴퓨터 웹개발 동아리",
-      kind: "동아리",
-      name: "김갑수",
-      submitday: "2021/03/14",
-      read: "미확인",
+      recordname: "나사 우주 개발 프로젝트",
+      kind: "외부행사",
+      name: "김도윤",
+      submitday: "2021/09/23",
+      read: "확인",
     },
     {
       recordname: "정의란 무엇인가 독후감",
       kind: "기타",
-      name: "김둘둘",
-      submitday: "2021/03/14",
-      read: "미확인",
+      name: "김오인",
+      submitday: "2021/08/11",
+      read: "확인",
     },
     {
       recordname: "독서 토론 대회",
       kind: "대회 및 수상",
-      name: "김셋",
-      submitday: "2021/03/14",
-      read: "미확인",
+      name: "정재훈",
+      submitday: "2021/08/03",
+      read: "확인",
     },
     {
       recordname: "4차학생회 회의",
       kind: "임원활동",
-      name: "김다섯",
-      submitday: "2021/03/14",
-      read: "미확인",
+      name: "박서준",
+      submitday: "2021/07/25",
+      read: "확인",
     },
     {
-      recordname: "xx",
+      recordname: "GPU칩 분해일지",
       kind: "동아리",
-      name: "김여섯",
-      submitday: "xx",
-      read: "미확인",
+      name: "마제동",
+      submitday: "2021/07/20",
+      read: "확인",
     },
     {
-      recordname: "xx",
+      recordname: "인천 앞바다 쓰레기 수거",
       kind: "동아리",
-      name: "김일곱",
-      submitday: "2021/03/14",
-      read: "미확인",
+      name: "마동석",
+      submitday: "2021/07/15",
+      read: "확인",
     },
     {
-      recordname: "xx",
+      recordname: "30층 빌딩 모델 설계",
       kind: "동아리",
-      name: "김여덜",
-      submitday: "2021/03/14",
-      read: "미확인",
+      name: "이제훈",
+      submitday: "2021/07/11",
+      read: "확인",
     },
     {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김아홉",
-      submitday: "2021/03/14",
-      read: "미확인",
+      recordname: "남극 연구소 방문일지",
+      kind: "기타",
+      name: "이예라",
+      submitday: "2021/06/14",
+      read: "확인",
     },
     {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열하나",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열둘",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열셋",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열넷",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열여섯",
-      submitday: "2021/03/14",
-      read: "미확인",
+      recordname: "동네 전력 소비량 조사",
+      kind: "기타",
+      name: "성지곤",
+      submitday: "2021/05/17",
+      read: "확인",
     },
   ];
 
@@ -169,14 +134,54 @@ function RegisterContent() {
         <Modal.Header closeButton>
           <Modal.Title className="ml-auto">
             {" "}
-            <hr></hr>
-            <div>이름 {modalInfo.name}</div>
-            <hr></hr>
+            <table className="table-modal">
+              <tbody>
+                <tr className="table-modal-td">
+                  <td className="table-modal-td">
+                    카테고리
+                    <span className="table-modal-fontsize">외부 행사</span>
+                  </td>
+                  <td className="table-modal-td">
+                    기록명
+                    <span className="table-modal-fontsize">나사 프로젝트</span>
+                  </td>
+                  <td className="table-modal-td">
+                    제출일
+                    <span className="table-modal-fontsize">9월 30일</span>
+                  </td>
+                </tr>
+                <tr className="table-modal-td">
+                  <td className="table-modal-td">
+                    이름
+                    <span className="table-modal-fontsize">김도윤</span>
+                  </td>
+                  <td className="table-modal-td">
+                    <span className="table-modal-fontsize">3학년 6반 11번</span>
+                  </td>
+                  <td className="table-modal-td">
+                    상태
+                    <span className="table-modal-fontsize">확인</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <h5>활동내용</h5>
-          <text>야스</text>
+          <text>
+            나사 우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
+            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다.
+          </text>
         </Modal.Body>
         <Modal.Footer className="modal_footer">
           <Button varient="secondary" onClick={handleClose}>
@@ -198,7 +203,7 @@ function RegisterContent() {
         <h3 className="school_name">성결고등학교</h3>
         <section className="card_info">
           <Card style={{ width: "14rem" }}>
-            <Card.Img variant="top" src={homepic} width="30px" height="100px" />
+            <Card.Img variant="left" src={homepic} width="90px" />
             <Card.Body className="text=right">
               <Card.Title className="text-right">
                 {currentUser.username} 선생님
@@ -216,13 +221,14 @@ function RegisterContent() {
         <br></br>
         <div>
           {" "}
-          <Button className="btn-info">
+          <div>
+            Today
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
               dateFormat="yyyy년 MM월 dd일"
             />
-          </Button>
+          </div>
         </div>
         <br></br>
       </section>

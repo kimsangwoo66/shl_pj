@@ -138,12 +138,12 @@ export default class Signup extends Component {
       this.state.userposition
     ).then(
       (response) => {
-        alert("회원가입이 완료됬습니다.");
-        this.props.history.push("/"); //회원가입이 완료된 후에 로그인 화면으로 넘어가도록 설정
         this.setState({
           message: response.data.message,
           successful: true,
         });
+        alert("회원가입이 완료됬습니다.");
+        this.props.history.push("/"); //회원가입이 완료된 후에 로그인 화면으로 넘어가도록 설정
       },
       (error) => {
         const resMessage =
@@ -162,6 +162,8 @@ export default class Signup extends Component {
         ); //DB에 기존에 존재하던 계정이 있을시
       }
     );
+    alert("회원가입이 완료됬습니다.");
+    this.props.history.push("/");
   }
   render() {
     return (

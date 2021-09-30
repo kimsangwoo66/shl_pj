@@ -13,20 +13,21 @@
 }
 
 .active_record_submit {
-  justify-content: center;
-  width: 25vh;
+  /* justify-content: center; */
+  width: max-content;
   height: 30vh;
 }
 
 .hr1 {
   border-width: 5px;
-  width: 25vh;
+  width: max-content;
 }
 
 .record_submit-student {
   justify-content: center;
   text-align: center;
   list-style: none;
+  width: max-content;
 }
 
 ul.record_submit-student li::before {

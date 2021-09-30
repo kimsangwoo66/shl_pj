@@ -23,6 +23,34 @@ const onChangeHandler = (e) => {
   //useState({ Items: newArray });
 };
 
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
 function NoticeContent() {
   const [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser);
   const [startDate, setStartDate] = useState(new Date());
@@ -47,106 +75,29 @@ function NoticeContent() {
     { dataField: "name", text: "등록자" },
     { dataField: "submitday", text: "등록일" },
     { dataField: "read", text: "상태" },
+    { dataField: "cont", text: "상태" },
   ];
 
   const data = [
     //테이블에 들어갈 데이터 임시 하드코딩
     {
-      recordname: "컴퓨터 웹개발 동아리",
-
-      name: "김갑수",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "정의란 무엇인가 독후감",
-
-      name: "김둘둘",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "독서 토론 대회",
+      recordname: "독서 토론 대회 수상자",
       kind: "대회 및 수상",
-      name: "김셋",
-      submitday: "2021/03/14",
+      name: "배소진",
+      submitday: "2021/09/29",
       read: "미확인",
     },
     {
-      recordname: "4차학생회 회의",
-      kind: "임원활동",
-      name: "김다섯",
-      submitday: "2021/03/14",
+      recordname: "10월 교내 대회 안내",
+
+      name: "박제동",
+      submitday: "2021/09/25",
       read: "미확인",
     },
     {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김여섯",
-      submitday: "xx",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김일곱",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김여덜",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김아홉",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열하나",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열둘",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열셋",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열넷",
-      submitday: "2021/03/14",
-      read: "미확인",
-    },
-    {
-      recordname: "xx",
-      kind: "동아리",
-      name: "김열여섯",
-      submitday: "2021/03/14",
+      recordname: "학생 기록 기준",
+      name: "김철수",
+      submitday: "2021/09/23",
       read: "미확인",
     },
   ];
@@ -170,23 +121,31 @@ function NoticeContent() {
           <Modal.Title className="ml-auto">
             {" "}
             <hr></hr>
-            <div>이름 {modalInfo.name}</div>
+            <div> {modalInfo.recordname}</div>
             <hr></hr>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h5>활동내용</h5>
-          <text>야스</text>
+          <h5>상세내용</h5>
+          <text>
+            최우수상 문예림 <br />
+          </text>
+
+          <text>
+            우수상 김수진
+            <br />
+          </text>
+          <text>
+            동상 김도윤
+            <hr />
+          </text>
         </Modal.Body>
         <Modal.Footer className="modal_footer">
           <Button varient="secondary" onClick={handleClose}>
-            내용복사
+            확인
           </Button>
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;
-          <Button varient="secondary" onClick={handleClose}>
-            확인완료
-          </Button>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp; &emsp;
+          &emsp;&emsp;
         </Modal.Footer>
       </Modal>
     );
@@ -245,13 +204,14 @@ function NoticeContent() {
         <br></br>
         <div>
           {" "}
-          <Button className="btn-info">
+          <div>
+            Today
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
               dateFormat="yyyy년 MM월 dd일"
             />
-          </Button>
+          </div>
         </div>
         <br></br>
       </section>
@@ -280,8 +240,14 @@ function NoticeContent() {
               <option>미확인</option>
               <option>입력완료</option>
             </select>
-            <Button onclick={show ? <ModalContent1 /> : null}>글쓰기</Button>
+            <Button ariant="primary" onClick={() => setShowModal(true)}>
+              글쓰기
+            </Button>
           </ul>
+          <MyVerticallyCenteredModal
+            show={showModal}
+            onHide={() => setShowModal(false)}
+          />
 
           <div className=".search-container button">
             <input type="search" placeholder="검색"></input>

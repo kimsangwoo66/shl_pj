@@ -52,8 +52,8 @@ function RegisterContent() {
   const data = [
     //테이블에 들어갈 데이터 임시 하드코딩
     {
-      recordname: "나사 우주 개발 프로젝트",
-      kind: "외부행사",
+      recordname: "서울시 코딩교육",
+      kind: "교외활동",
       name: "김도윤",
       submitday: "2021/09/23",
       read: "확인",
@@ -139,11 +139,13 @@ function RegisterContent() {
                 <tr className="table-modal-td">
                   <td className="table-modal-td">
                     카테고리
-                    <span className="table-modal-fontsize">외부 행사</span>
+                    <span className="table-modal-fontsize">교외 활동</span>
                   </td>
                   <td className="table-modal-td">
                     기록명
-                    <span className="table-modal-fontsize">나사 프로젝트</span>
+                    <span className="table-modal-fontsize">
+                      서울시 코딩교육
+                    </span>
                   </td>
                   <td className="table-modal-td">
                     제출일
@@ -170,17 +172,11 @@ function RegisterContent() {
         <Modal.Body>
           <h5>활동내용</h5>
           <text>
-            나사 우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다. 나사
-            우주프로젝트에 참여했다. 일론머스크를 만나 칭찬을 들었다.
+            학교 외부에서 시행하는 코딩 체험을 해봤다.  c언어, 파이썬, 자바 등등
+            다양한 체험을 할 수 있었다. 나는 처음에 c언어파트로 들어가 "hello
+            world" 라는 단어가 생성되도록 따라했는데 너무 신기했다. 다양한
+            언어들로 간단한 코드 생성을 해봤고, 평소에 관심이 많았지만 이번
+            체험을 통해서 더욱더 관심이 생겼다
           </text>
         </Modal.Body>
         <Modal.Footer className="modal_footer">
@@ -209,8 +205,8 @@ function RegisterContent() {
                 {currentUser.username} 선생님
               </Card.Title>
               <hr />
-              <Card.Subtitle className="text-center">
-                {currentUser.userid}
+              <Card.Subtitle className="text-right">
+                아이디 : {currentUser.userid}
               </Card.Subtitle>
               <Card.Text className="text-right">
                 <div>{currentUser.userposition}</div>

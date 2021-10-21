@@ -36,7 +36,7 @@ function HomeContent() {
                 </Card.Title>
                 <hr />
                 <Card.Subtitle className="text-right">
-                  {currentUser.userid}
+                  아이디 : {currentUser.userid}
                 </Card.Subtitle>
                 <Card.Text className="text-right">
                   <div>{currentUser.userposition}</div>
@@ -56,31 +56,31 @@ function HomeContent() {
                 <div>
                   <li>
                     <div className="row">
-                      <div className="col-4" to="#">
+                      <div className="col-2" to="#">
                         전체 공지-
                       </div>
                       <div className="col-6">독서 토론 대회 수상자</div>
-                      <div className="ml-auto">배소진 선생님 |2021/09/29</div>
+                      <div className="ml-right">배소진 선생님 |2021/09/29</div>
                     </div>
                   </li>
                   <br></br> {/* 공지가 개시될때마다 반복해서 띄워줘야한다.*/}
                   <li>
                     <div className="row">
-                      <div className="col-4" to="#">
+                      <div className="col-2" to="#">
                         전체 공지-
                       </div>
                       <div className="col-6">10월 교내 대회 안내</div>
-                      <div className="ml-auto">박제동 선생님 | 2021/09/25</div>
+                      <div className="ml-right">박제동 선생님 | 2021/09/25</div>
                     </div>
                   </li>
                   <br></br> {/* 공지가 개시될때마다 반복해서 띄워줘야한다.*/}
                   <li>
                     <div className="row">
-                      <div className="col-4" to="#">
+                      <div className="col-2" to="#">
                         전체 공지-
                       </div>
                       <div className="col-6">학생 기록 기준</div>
-                      <div className="ml-auto">김철수 선생님 | 2021/09/23</div>
+                      <div className="ml-right">김철수 선생님 | 2021/09/23</div>
                     </div>
                   </li>
                 </div>
@@ -106,18 +106,26 @@ function HomeContent() {
           <div>
             <br />
             <div className="row">
-              <div className="col-7">
+              <div>
                 <div>
                   <h5>활동 기록 제출</h5>{" "}
                   {/*정확히 어떤 일정들을 담아야할지 모르겠다. */}
                   <hr className="class-2" />{" "}
                   {/*App.css 에 hr 타입 종류 메소드화*/}
                   <ul className="record_submit-student">
-                    <li>김도윤[나사 우주프로젝트]</li>{" "}
+                    <li className="record_submit-all">
+                      김도윤[서울시 코딩교육]
+                    </li>
                     {/*오늘 활동 기록을 제출한 학생들의 이름이 나도록 한다.*/}
-                    <li>김갑수[코딩 알고리즘 5등]</li>
-                    <li>김나나[쇼미더머니10 예선통과]</li>
-                    <li>정현배[삼성 시각디자인 공모전3등]</li>
+                    <li className="record_submit-all">
+                      김갑수[코딩 알고리즘 5등]
+                    </li>
+                    <li className="record_submit-all">
+                      김나나[쇼미더머니10 예선통과]
+                    </li>
+                    <li className="record_submit-all">
+                      정현배[삼성 시각디자인 공모전3등]
+                    </li>
                   </ul>
                   <hr className="class-2" />
                 </div>
@@ -130,6 +138,9 @@ function HomeContent() {
                   {/*App.css 에 hr 타입 종류 메소드화*/}
                   <li>독서 감상문 제출 마감</li>{" "}
                   {/*오늘 날짜의 캘린더에 들어가있는 내용이 리스트에 나와야한다.*/}
+                  <br />
+                  <br />
+                  <br />
                   <hr className="class-2" />
                 </div>
               </div>

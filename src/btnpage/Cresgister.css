@@ -23,18 +23,29 @@
   width: max-content;
 }
 
+.record_submit-all {
+  text-align: left;
+  /* align-self: stretch; */
+  align-content: left;
+}
+
 .record_submit-student {
-  justify-content: center;
-  text-align: center;
+  justify-content: start;
+  align-items: start;
+  text-align: left;
+  align-self: stretch;
   list-style: none;
   width: max-content;
 }
 
-ul.record_submit-student li::before {
+.ul.record_submit-student li::before {
   /*활동기록 제출 li new 고정*/
   content: "new";
   color: blue;
-  display: inline-block;
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .right_content {

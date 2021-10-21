@@ -23,8 +23,8 @@ function PlanContent() {
                 {currentUser.username} 선생님
               </Card.Title>
               <hr />
-              <Card.Subtitle className="text-center">
-                {currentUser.userid}
+              <Card.Subtitle className="text-right">
+                아이디 : {currentUser.userid}
               </Card.Subtitle>
               <Card.Text className="text-right">
                 <div>{currentUser.userposition}</div>
